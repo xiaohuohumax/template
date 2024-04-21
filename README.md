@@ -1,12 +1,13 @@
-# node template
+# monorepo template
 
-这是一个 node 模板项目，可以基于此项目快速搭建自己的 node 项目。
+这是一个 monorepo 模板, 可以快速搭建 monorepo 项目。
 
 ## 📦 包含功能
 
 - git commit 规范检查
 - changeset 版本管理
 - github actions 自动发布
+- pnpm monorepo 管理
 
 ## ♻️ 提交流程
 

@@ -1,0 +1,19 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "vite-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "xiaohuohumax",
+  "license": "MIT",
+  "dependencies": {
+    "utils": "workspace:^"
+  },
+  "devDependencies": {
+    "vite-node": "^1.5.0"
+  }
+}
