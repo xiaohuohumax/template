@@ -1,9 +1,7 @@
 name: Release Publish
 
 on:
-  # 手动触发
   workflow_dispatch:
-  # 发布到npm
   push:
     branches:
       - main
@@ -22,10 +20,8 @@ jobs:
       - name: Set node version to 20
         uses: actions/setup-node@v4
         with:
-          # node版本
           node-version: 20
           registry-url: https://registry.npmjs.org/
-          # 缓存依赖
           cache: npm
 
       - name: Install
