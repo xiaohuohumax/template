@@ -1,7 +1,7 @@
 {
-  "name": "node-template",
+  "name": "monorepo-template",
   "version": "1.0.0",
-  "description": "node template",
+  "description": "monorepo template",
   "type": "module",
   "private": true,
   "packageManager": "pnpm@9.0.4",
@@ -14,7 +14,7 @@
     "release": "pnpm build && changeset publish"
   },
   "keywords": [
-    "node",
+    "monorepo",
     "template",
     "commitizen",
     "changeset"
