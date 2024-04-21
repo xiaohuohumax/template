@@ -1,20 +1,25 @@
-# node template
+# vue template
 
-这是一个 node 模板项目，可以基于此项目快速搭建自己的 node 项目。
+这是一个 vue 模板项目，包含了一些常用的功能。
 
 ## 📦 包含功能
 
 - git commit 规范检查
 - changeset 版本管理
 - github actions 自动发布
+- vite 开发环境
+- axios 网络请求库
+- uno.css 原子化 CSS 框架
+- pinia 状态管理库
 
 ## ♻️ 提交流程
 
 1. 编写代码
 2. [可选] 修改版本号 `npm run changeset`
 3. 拉取最新代码 `git pull`
-4. 本地提交 `npm run commit`
-5. 推送代码到远程仓库
+4. lint 检查 `npm run lint:fix`
+5. 本地提交 `npm run commit`
+6. 推送代码到远程仓库
 
 ## ⚡ 注意
 
