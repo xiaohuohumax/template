@@ -1,11 +1,11 @@
 import type { WebviewApi } from 'vscode-webview';
 
-export interface MessageListener {
+export interface CommandMessageListener {
   command: MessageCommand;
   callback: (message: Message) => void;
 }
 
-const _messageListeners: MessageListener[] = [];
+const _messageListeners: CommandMessageListener[] = [];
 
 window.addEventListener('message', (event) => {
   const message = event.data as Message;
@@ -33,7 +33,7 @@ function postMessage(message: Message) {
  * 添加消息监听器
  * @param listener 消息监听器
  */
-function addEventListener(listener: MessageListener) {
+function addEventListener(listener: CommandMessageListener) {
   _messageListeners.push(listener);
 }
 
@@ -41,7 +41,7 @@ function addEventListener(listener: MessageListener) {
  * 删除消息监听器
  * @param listener 消息监听器
  */
-function removeEventListener(listener: MessageListener) {
+function removeEventListener(listener: CommandMessageListener) {
   const index = _messageListeners.indexOf(listener);
   if (index >= 0) {
     _messageListeners.splice(index, 1);

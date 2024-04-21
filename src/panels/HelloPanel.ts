@@ -4,14 +4,27 @@ const webviewBuildPath = ['webview', 'hello', 'build'];
 const webviewId = 'showHelloPanel';
 const webviewTitle = l10n.t('hello');
 
-function _getUri(webview: Webview, extensionUri: Uri, ...pathList: string[]) {
-  return webview.asWebviewUri(Uri.joinPath(extensionUri, ...pathList));
-}
-
 let _panel: WebviewPanel | undefined;
 const _disposables: Disposable[] = [];
 const _listeners: MessageListener[] = [];
 
+/**
+ * 获取webview相对路径
+ * @param webview webview
+ * @param extensionUri 扩展Uri
+ * @param pathList 路径列表
+ * @returns 
+ */
+function _getUri(webview: Webview, extensionUri: Uri, ...pathList: string[]) {
+  return webview.asWebviewUri(Uri.joinPath(extensionUri, ...pathList));
+}
+
+/**
+ * 生成html内容
+ * @param webview webview
+ * @param extensionUri 扩展Uri
+ * @returns 
+ */
 function _getWebviewContent(webview: Webview, extensionUri: Uri) {
   const stylesUri = _getUri(webview, extensionUri, ...webviewBuildPath, 'assets', 'index.css');
   const scriptUri = _getUri(webview, extensionUri, ...webviewBuildPath, 'assets', 'index.js');

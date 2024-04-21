@@ -7,6 +7,11 @@ const outputChannel = logLevel !== LogLevel.Off
   ? window.createOutputChannel(import.meta.env.VITE_OUTPUT_CHANNEL_NAME)
   : null;
 
+/**
+ * 格式化日志消息
+ * @param msgs 日志内容
+ * @returns 
+ */
 function formatMessage(...msgs: unknown[]): string {
   return msgs.map(m => {
     if (typeof m === 'string') {

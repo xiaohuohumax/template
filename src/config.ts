@@ -17,6 +17,12 @@ export class Config {
     );
   }
 
+  /**
+   * 监听配置变化
+   * @param key 配置key
+   * @param listener 配置变化回调
+   * @returns 
+   */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public static watch(key: keyof IConfig, listener: (e: ConfigurationChangeEvent) => any) {
     return workspace.onDidChangeConfiguration((event) => {
