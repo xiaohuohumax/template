@@ -1,15 +1,41 @@
 {
-  "name": "node-template",
-  "version": "1.0.0",
-  "description": "node template",
-  "type": "module",
+  "name": "vscode-extension-template",
+  "displayName": "Vscode Extension Template",
+  "description": "vscode extension template",
+  "version": "0.0.0",
   "private": true,
+  "publisher": "xiaohuohumax",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "l10n": "./l10n",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-extension-template.helloWorld",
+        "title": "%vscode-extension-template.helloWorld.title%"
+      }
+    ]
+  },
   "scripts": {
-    "build": "echo building...",
+    "install:all": "npm install --frozen-lockfile && npm install --prefix=webview/hello --frozen-lockfile",
     "commit": "git add . && cz",
     "postinstall": "simple-git-hooks",
     "changeset": "changeset",
-    "release": "npm run build && changeset publish"
+    "release": "npm run build && changeset publish",
+    "vscode:prepublish": "npm run compile",
+    "compile": "npm run build",
+    "build": "npm run build:hello && vite build --emptyOutDir",
+    "build:hello": "vite build --emptyOutDir",
+    "watch": "vite build --watch --mode development --emptyOutDir",
+    "watch:hello": "npm run watch --prefix=webview/hello",
+    "lint:fix": "eslint --ext .ts,.mts,.d.ts --fix .",
+    "vsce-publish": "vsce publish",
+    "vsce-package": "vsce package"
   },
   "keywords": [
     "node",
@@ -34,14 +60,23 @@
       "path": "node_modules/cz-git"
     }
   },
-  "dependencies": {},
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vscode/test-web": "^0.0.53",
     "commitizen": "^4.3.0",
     "cz-git": "^1.9.1",
-    "simple-git-hooks": "^2.11.1"
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.2.10"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.2.1"
   }
 }

@@ -1,12 +1,29 @@
-# node template
+# vscode extension template
 
-这是一个 node 模板项目，可以基于此项目快速搭建自己的 node 项目。
+这是一个 vscode 插件模板，包含了 git commit 规范检查、changeset 版本管理、github actions 自动发布等功能。
+
+## 🚀 使用
+
+```bash
+# 安装依赖
+npm run install:all
+
+# 打包
+npm run build
+
+# 构建 vscode 插件
+npm run vsce-package
+```
 
 ## 📦 包含功能
 
 - git commit 规范检查
 - changeset 版本管理
 - github actions 自动发布
+- vite 开发环境
+- env 环境变量
+- l10n
+- webview panel
 
 ## ♻️ 提交流程
 
@@ -21,7 +38,7 @@
 
 1. 将项目根目录下的 `_github` 改为 `.github`
 2. 修改仓库权限，允许 actions 运行
-3. 发布npm包需要在仓库下创建 `NPM_PUBLISH_TOKEN`的 npm token
+3. 发布vscode扩展需要在仓库下创建 `VSCE_PAT` 的 vscode publish token
 
 #### ⏫ changesets 版本管理
 

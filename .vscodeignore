@@ -1,0 +1,7 @@
+**/*
+!webview/*/build
+!LICENSE
+!package*.json
+!out
+!l10n
+!icon.png

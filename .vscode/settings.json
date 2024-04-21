@@ -1,7 +1,17 @@
 {
+  "files.exclude": {
+    "out": false
+  },
+  "search.exclude": {
+    "out": true
+  },
+  "typescript.tsc.autoDetect": "off",
   "cSpell.words": [
     "breakline",
+    "cmds",
     "commitlint",
+    "idux",
+    "linebreak",
     "Prefixs",
     "tada"
   ]

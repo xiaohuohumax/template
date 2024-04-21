@@ -29,23 +29,21 @@ jobs:
           cache: npm
 
       - name: Install
-        run: npm install --frozen-lockfile
+        run: npm run install:all
 
       - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
         with:
-          # 构建发布
-          publish: npm run release
-          # 只发布release
-          # publish: npx changeset tag
+          publish: npx changeset tag
           commit: "chore: release version"
           title: "chore: release version"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
-      # 自定义发布流程
-      # - name: Custom Publish
-      #   if: steps.changesets.outputs.published == 'true'
+      - name: Publish to Visual Studio Marketplace
+        if: steps.changesets.outputs.published == 'true'
+        uses: HaaLeo/publish-vscode-extension@v1
+        with:
+          pat: ${{ secrets.VSCE_PAT }}
+          registryUrl: https://marketplace.visualstudio.com
