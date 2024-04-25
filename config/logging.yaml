@@ -1,0 +1,60 @@
+version: 1
+
+# 允许已存在的日志记录器
+disable_existing_loggers: False
+
+formatters:
+  simple_formatter:
+    format: '%(asctime)s.%(msecs)04d %(levelname)-8s: %(message)s'
+    datefmt: '%Y-%M-%d %H:%M:%S'
+  upgrade_formatter:
+    format: "%(asctime)s.%(msecs)04d %(process)-7d %(levelname)-8s: %(message)s"
+    datefmt: '%Y-%M-%d %H:%M:%S'
+  empty_formatter:
+    format: '%(message)s'
+
+defaults:
+  console: &default_console_handler
+    class: logging.StreamHandler
+    level: DEBUG
+    stream: ext://sys.stdout
+
+  file: &default_file_handler
+    class: logging.handlers.RotatingFileHandler
+    level: INFO
+    filename: log/app.log
+    maxBytes: 10485760
+    backupCount: 50
+    encoding: utf8
+
+handlers:
+  console_handler:
+    <<: *default_console_handler
+    formatter: simple_formatter
+
+  file_handler:
+    <<: *default_file_handler
+    formatter: upgrade_formatter
+
+  empty_console_handler:
+    <<: *default_console_handler
+    formatter: empty_formatter
+
+  empty_file_handler:
+    <<: *default_file_handler
+    formatter: empty_formatter
+
+loggers:
+  empty_logger:
+    level: INFO
+    # 阻止向上级日志传播
+    propagate: False
+    handlers:
+      - empty_console_handler
+      - empty_file_handler
+
+root:
+  level: INFO
+  handlers:
+    - console_handler
+    - file_handler

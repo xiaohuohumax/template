@@ -1,0 +1,5 @@
+app:
+  name: python-template
+
+banner:
+  welcome: "Welcome to python-template!"
