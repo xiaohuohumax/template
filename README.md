@@ -6,6 +6,8 @@
 
 + env 环境变量
 + config 配置文件，支持多环境配置 (application.{mode}.yaml)
++ database 数据库连接(sqlmodel)
++ 简单权限验证 (RABC)
 + logging 日志配置
 + args 命令行参数
 + docker
@@ -31,7 +33,7 @@ rye pin 3.8
 rye sync
 ```
 
-## docker 镜像构建
+## 🐋 docker 镜像构建
 
 ```bash
 # 构建镜像
