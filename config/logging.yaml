@@ -53,6 +53,14 @@ loggers:
       - empty_console_handler
       - empty_file_handler
 
+  sqlalchemy:
+    level: DEBUG
+    # 阻止向上级日志传播
+    propagate: False
+    handlers:
+      - console_handler
+      - file_handler
+
 root:
   level: INFO
   handlers:

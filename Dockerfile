@@ -10,4 +10,4 @@ COPY . .
 
 RUN pip install --no-cache-dir -r requirements.lock
 
-ENTRYPOINT ["python", "-m", "run"]
+ENTRYPOINT ["gunicorn", "--config", "gunicorn_config.py", "src.app:app"]

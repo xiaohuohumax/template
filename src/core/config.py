@@ -44,6 +44,34 @@ class AppConfig(BaseModel):
     """
     # 应用名称
     name: str = ""
+    # jwt密钥
+    jwt_secret_key: str = ""
+
+
+class DatabaseConfig(BaseModel):
+    """
+    数据库配置
+    """
+    # 服务ip
+    host: str = '0.0.0.0'
+    # 服务端口
+    port: int = 3306
+    # 用户名
+    username: str = ''
+    # 密码
+    password: str = ''
+    # 数据库名
+    database_name: str = ''
+    # 是否显示sql语句
+    echo: bool = True
+    # 连接池大小
+    pool_size: int = 20
+    # 补充连接池大小(超过连接池pool_size大小时，创建新连接)
+    max_overflow: int = 10
+    # 链接回收时间 秒
+    pool_recycle: int = 3600
+    # 连接超时时间 秒
+    pool_timeout: int = 30
 
 
 class Config(BaseModel):
@@ -56,6 +84,8 @@ class Config(BaseModel):
     logging: LoggingConfig = LoggingConfig()
     # banner
     banner: BannerConfig = BannerConfig()
+    # 数据库配置
+    database: DatabaseConfig = DatabaseConfig()
 
 
 # 配置

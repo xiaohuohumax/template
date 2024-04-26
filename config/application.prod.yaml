@@ -1,2 +1,9 @@
 logging:
   level: info
+
+database:
+  host: 192.168.0.115
+  port: 3306
+  username: root
+  password: '1234567890'
+  database_name: test

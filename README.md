@@ -1,4 +1,4 @@
-# python template
+# python flask template
 
 这是一个简单的 Python 的项目模板，包含了常用的功能模块，可以快速搭建 Python 项目。
 
@@ -29,6 +29,16 @@ rye run start -h
 # 切换到python3.8环境
 rye pin 3.8
 rye sync
+```
+
+## docker 镜像构建
+
+```bash
+# 构建镜像
+docker build -t flask-template .
+
+# 运行容器
+docker run -p 8080:8080 -d flask-template
 ```
 
 ## ⚡ 注意事项

@@ -1,8 +1,16 @@
 app:
   name: python-template
+  jwt_secret_key: '1234567890'
 
 banner:
   welcome: "Welcome to python-template!"
 
 logging:
   level: debug
+
+database:
+  host: localhost
+  port: 3306
+  username: root
+  password: '1234567890'
+  database_name: test

@@ -4,7 +4,7 @@ from pathlib import Path
 from util.file import read_file
 from util.logging import config_logging
 from core.config import config
-from .main import run
+from .main import app
 
 # 初始化日志配置
 config_logging(config.logging.config_path, config.logging.level)
@@ -28,5 +28,4 @@ def print_banner():
 
 print_banner()
 
-
-__all__ = ["run"]
+__all__ = ["app"]
