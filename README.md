@@ -7,7 +7,8 @@
 + env 环境变量
 + config 配置文件，支持多环境配置 (application.{mode}.yaml)
 + database 数据库连接(sqlmodel)
-+ 简单权限验证 (RABC)
++ 简单权限验证 jwt (RABC)
++ redis 缓存
 + logging 日志配置
 + args 命令行参数
 + docker

@@ -7,6 +7,7 @@ from flask_cors import CORS
 from core.config import config
 from core.env import env
 from core.jwt import jwt
+# from core.redis import redis_client, redis_url
 from api import register_apis
 from util.result import Result
 
@@ -26,6 +27,10 @@ CORS(app)
 # jwt
 app.config["JWT_SECRET_KEY"] = config.app.jwt_secret_key
 jwt.init_app(app)
+
+# redis
+# app.config["REDIS_URL"] = redis_url
+# redis_client.init_app(app)
 
 # apis
 register_apis(app)

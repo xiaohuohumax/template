@@ -24,9 +24,12 @@ cryptography==42.0.5
 flask==3.0.3
     # via flask-cors
     # via flask-jwt-extended
+    # via flask-redis
 flask-cors==4.0.0
     # via app
 flask-jwt-extended==4.6.0
+    # via app
+flask-redis==0.4.0
     # via app
 gevent==24.2.1
     # via app
@@ -60,6 +63,8 @@ pymysql==1.1.0
     # via app
 python-dotenv==1.0.1
     # via pydantic-settings
+redis==5.0.4
+    # via flask-redis
 ruamel-yaml==0.18.6
     # via app
 ruamel-yaml-clib==0.2.8

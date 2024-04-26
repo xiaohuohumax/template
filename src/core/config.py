@@ -74,6 +74,22 @@ class DatabaseConfig(BaseModel):
     pool_timeout: int = 30
 
 
+class RedisConfig(BaseModel):
+    """
+    redis配置
+    """
+    # 服务ip
+    host: str = '127.0.0.1'
+    # 服务端口
+    port: int = 6379
+    # 用户名
+    username: str = ''
+    # 密码
+    password: str = ''
+    # 数据库
+    db: int = 0
+
+
 class Config(BaseModel):
     """
     配置信息
@@ -86,6 +102,8 @@ class Config(BaseModel):
     banner: BannerConfig = BannerConfig()
     # 数据库配置
     database: DatabaseConfig = DatabaseConfig()
+    # redis配置
+    redis: RedisConfig = RedisConfig()
 
 
 # 配置
