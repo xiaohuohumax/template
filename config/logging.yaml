@@ -6,10 +6,10 @@ disable_existing_loggers: False
 formatters:
   simple_formatter:
     format: '%(asctime)s.%(msecs)04d %(levelname)-8s: %(message)s'
-    datefmt: '%Y-%M-%d %H:%M:%S'
+    datefmt: '%Y-%m-%d %H:%M:%S'
   upgrade_formatter:
     format: "%(asctime)s.%(msecs)04d %(process)-7d %(levelname)-8s: %(message)s"
-    datefmt: '%Y-%M-%d %H:%M:%S'
+    datefmt: '%Y-%m-%d %H:%M:%S'
   empty_formatter:
     format: '%(message)s'
 

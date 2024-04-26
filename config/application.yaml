@@ -3,3 +3,6 @@ app:
 
 banner:
   welcome: "Welcome to python-template!"
+
+logging:
+  level: debug
