@@ -1,12 +1,13 @@
-# node template
+# typescript template
 
-这是一个 node 模板项目，可以基于此项目快速搭建自己的 node 项目。
+这是一个 typescript 模板项目，可以基于此项目快速搭建自己的 typescript 项目。
 
 ## 📦 包含功能
 
 - git commit 规范检查
 - changeset 版本管理
 - github actions 自动发布
+- typescript 运行环境，打包配置
 
 ## ♻️ 提交流程
 

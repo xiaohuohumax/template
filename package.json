@@ -1,11 +1,12 @@
 {
-  "name": "node-template",
+  "name": "node-typescript-template",
   "version": "1.0.0",
-  "description": "node template",
+  "description": "typescript template",
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "echo building...",
+    "dev": "vite-node src/index.ts",
+    "build": "vite build && tsc",
     "commit": "git add . && cz",
     "postinstall": "simple-git-hooks",
     "changeset": "changeset",
@@ -13,6 +14,7 @@
   },
   "keywords": [
     "node",
+    "typescript",
     "template",
     "commitizen",
     "changeset"
@@ -42,6 +44,10 @@
     "@commitlint/config-conventional": "^19.2.2",
     "commitizen": "^4.3.0",
     "cz-git": "^1.9.1",
-    "simple-git-hooks": "^2.11.1"
+    "simple-git-hooks": "^2.11.1",
+    "tsc": "^2.0.4",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vite-node": "^1.5.2"
   }
 }
