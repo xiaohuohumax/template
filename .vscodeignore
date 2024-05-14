@@ -1,5 +1,6 @@
 **/*
 !webview/*/build
+!CHANGELOG.md
 !LICENSE
 !package*.json
 !out
