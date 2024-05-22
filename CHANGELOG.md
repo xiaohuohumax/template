@@ -1,5 +1,11 @@
 # node-template
 
+## 0.1.0
+
+### Minor Changes
+
+- 提取 Panel 类
+
 ## 0.0.1
 
 ### Patch Changes
