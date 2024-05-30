@@ -12,9 +12,9 @@
 ## ♻️ 提交流程
 
 1. 编写代码
-2. [可选] 修改版本号 `npm run changeset`
+2. [可选] 修改版本号 `pnpm changeset`
 3. 拉取最新代码 `git pull`
-4. 本地提交 `npm run commit`
+4. 本地提交 `pnpm commit`
 5. 推送代码到远程仓库
 
 ## ⚡ 注意
