@@ -1,4 +1,4 @@
-# node-template
+# node-bookmarklet-template
 
 ## 1.0.0
 
