@@ -1,10 +1,10 @@
 import { defineConfig } from 'rollup';
 import esbuild from 'rollup-plugin-esbuild';
-import dts from 'rollup-plugin-dts'
+import dts from 'rollup-plugin-dts';
 
 const entries = {
   'index': './src/index.ts',
-}
+};
 
 export default defineConfig([
   {
@@ -35,4 +35,4 @@ export default defineConfig([
     },
     plugins: [dts()]
   }
-])
+]);
