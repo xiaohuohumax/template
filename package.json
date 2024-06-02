@@ -11,7 +11,7 @@
     "commit": "git add . && cz",
     "postinstall": "simple-git-hooks",
     "changeset": "changeset",
-    "lint:fix": "eslint --ext .ts . --fix",
+    "lint:fix": "eslint --ext .ts,.vue . --fix",
     "release": "npm run build && changeset publish"
   },
   "keywords": [
@@ -38,6 +38,9 @@
       "path": "node_modules/cz-git"
     }
   },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
@@ -45,11 +48,15 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@typescript-eslint/eslint-plugin": "^7.11.0",
     "@typescript-eslint/parser": "^7.11.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@xiaohuohumax/vite-plugin-bookmarklet": "^1.0.0",
     "commitizen": "^4.3.0",
     "cz-git": "^1.9.1",
     "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.26.0",
     "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.2.2",
     "vite": "^5.2.12",
-    "@xiaohuohumax/vite-plugin-bookmarklet": "^1.0.0"
+    "vue-tsc": "^2.0.6"
   }
 }

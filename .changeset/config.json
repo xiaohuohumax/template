@@ -11,7 +11,7 @@
   "access": "public",
   "updateInternalDependencies": "patch",
   "ignore": [],
-  "baseBranch": "node",
+  "baseBranch": "node-bookmarklet-vue",
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "updateInternalDependents": "always"
   }

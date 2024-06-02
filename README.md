@@ -1,6 +1,6 @@
-# node bookmarklet template
+# node bookmarklet vue template
 
-这是一个 node bookmarklet 模板项目，可以基于此项目快速搭建自己的 node bookmarklet 项目。
+这是一个 node bookmarklet vue 模板项目，可以基于此项目快速搭建自己的 node bookmarklet vue 项目。
 
 ## 📦 包含功能
 
