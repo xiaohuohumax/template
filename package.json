@@ -1,7 +1,7 @@
 {
-  "name": "node-template",
+  "name": "node-vitepress-template",
   "version": "1.0.0",
-  "description": "node template",
+  "description": "node vitepress template",
   "type": "module",
   "private": true,
   "scripts": {
@@ -10,7 +10,10 @@
     "postinstall": "simple-git-hooks",
     "changeset": "changeset",
     "lint:fix": "eslint --ext .ts . --fix",
-    "release": "npm run build && changeset publish"
+    "release": "npm run build && changeset publish",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "keywords": [
     "node",
@@ -45,6 +48,7 @@
     "commitizen": "^4.3.0",
     "cz-git": "^1.9.1",
     "eslint": "^8.57.0",
-    "simple-git-hooks": "^2.11.1"
+    "simple-git-hooks": "^2.11.1",
+    "vitepress": "^1.2.3"
   }
 }

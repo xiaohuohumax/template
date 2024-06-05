@@ -1,6 +1,6 @@
-# node template
+# node vitepress template
 
-这是一个 node 模板项目，可以基于此项目快速搭建自己的 node 项目。
+这是一个 node vitepress 模板项目，可以基于此项目快速搭建自己的 node vitepress 项目。
 
 ## 📦 包含功能
 
@@ -18,11 +18,11 @@
 
 ## ⚡ 注意
 
-#### 🤖 github actions 自动发包
+#### 🤖 github actions 自动发布 Github Pages
 
 1. 将项目根目录下的 `_github` 改为 `.github`
-2. 修改仓库权限，允许 actions 运行
-3. 发布npm包需要在仓库下创建 `NPM_PUBLISH_TOKEN`的 npm token
+2. 修改 `./docs/.vitepress/config.ts` `base` Pages 的基础路径
+3. 修改仓库权限，允许 actions 运行, 以及开启 Github Pages 功能
 
 #### ⏫ changesets 版本管理
 
