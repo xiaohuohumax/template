@@ -1,8 +1,8 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress';
 
 export default defineConfig({
-  title: "Node VitePress",
-  description: "Node VitePress Template",
+  title: 'Node VitePress',
+  description: 'Node VitePress Template',
   base: '',
   vite: {},
   themeConfig: {
@@ -23,4 +23,4 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
   }
-})
+});
