@@ -44,14 +44,14 @@ handlers:
     <<: *default_file_handler
     formatter: empty_formatter
 
-loggers:
-  empty_logger:
-    level: INFO
-    # 阻止向上级日志传播
-    propagate: False
-    handlers:
-      - empty_console_handler
-      - empty_file_handler
+# loggers:
+#   empty_logger:
+#     level: INFO
+#     # 阻止向上级日志传播
+#     propagate: False
+#     handlers:
+#       - empty_console_handler
+#       - empty_file_handler
 
 root:
   level: INFO

@@ -1,10 +1,9 @@
-import logging
 from pathlib import Path
 
-from util.file import read_file
-from util.logging import config_logging
-from core.config import config
-from .main import run
+from .util.file import read_file
+from .util.logging import config_logging
+from .config import config
+from .app import App
 
 # 初始化日志配置
 config_logging(config.logging.config_path, config.logging.level)
@@ -21,12 +20,10 @@ def print_banner():
     if not banner_file.exists():
         return
 
-    empty_logger = logging.getLogger("empty_logger")
-    empty_logger.info(read_file(banner_file))
-    empty_logger.info(config.banner.welcome + '\n')
+    print(read_file(banner_file))
+    print(config.banner.welcome + '\n')
 
 
 print_banner()
 
-
-__all__ = ["run"]
+__all__ = ["App"]

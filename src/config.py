@@ -2,7 +2,7 @@ from typing import Optional
 
 from pydantic import BaseModel, field_validator
 
-from util.config import load_config
+from .util.config import load_config
 from .env import env
 
 

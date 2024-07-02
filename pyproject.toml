@@ -26,4 +26,4 @@ allow-direct-references = true
 packages = ["src/app"]
 
 [tool.rye.scripts]
-start = "python -m run"
+start = "python -m main"
