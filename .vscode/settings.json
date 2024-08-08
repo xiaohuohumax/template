@@ -1,0 +1,17 @@
+{
+    "yaml.schemas": {
+        "schema/schema.json": "config/application*.yaml",
+    },
+    "cSpell.words": [
+        "breakline",
+        "commitizen",
+        "commitlint",
+        "dotenv",
+        "npmjs",
+        "Prefixs",
+        "pydantic",
+        "rimraf",
+        "ruamel",
+        "tada"
+    ]
+}

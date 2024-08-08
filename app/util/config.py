@@ -1,5 +1,5 @@
-from typing import TypeVar, Type
 from pathlib import Path
+from typing import Type, TypeVar
 
 from pydantic import BaseModel
 
@@ -29,7 +29,7 @@ def _merge_config(base: dict, add: dict) -> dict:
             base[key] = value
 
 
-def load_config(config_class: Type[_T], config_path: str, mode: str) -> _T:
+def load_config(config_class: Type[_T], config_dir: Path, mode: str) -> _T:
     """
     加载配置
 
@@ -49,8 +49,8 @@ def load_config(config_class: Type[_T], config_path: str, mode: str) -> _T:
     """
 
     files = [
-        Path(config_path, 'application.yaml'),
-        Path(config_path, f'application.{mode}.yaml'),
+        Path(config_dir, 'application.yaml'),
+        Path(config_dir, f'application.{mode}.yaml'),
     ]
 
     config = {}

@@ -23,7 +23,8 @@ dev-dependencies = []
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/app"]
+packages = ["app"]
 
 [tool.rye.scripts]
 start = "python -m main"
+schema = "python -m schema"

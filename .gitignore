@@ -6,6 +6,5 @@ wheels/
 *.egg-info
 
 .venv/
-.vscode/
 
 *.log
