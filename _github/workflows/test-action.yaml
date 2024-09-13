@@ -1,0 +1,21 @@
+name: Test Action
+on:
+  push:
+    branches:
+      - node-github-action
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: node-github-action
+      - name: Test Action
+        uses: ./
+        id: test-action
+        with:
+          message: "Hello, World!"
+      - name: Print Output
+        run: "echo Output: ${{ steps.test-action.outputs.result }}"

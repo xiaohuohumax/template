@@ -1,4 +1,5 @@
 /** @type {import('cz-git').UserConfig} */
+// eslint-disable-next-line no-undef
 module.exports = {
   ignores: [(commit) => commit.includes('init')],
   extends: ['@commitlint/config-conventional'],

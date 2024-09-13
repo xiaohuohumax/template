@@ -1,4 +1,4 @@
-# node-template
+# node-github-action-template
 
 ## 1.0.0
 

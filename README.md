@@ -1,6 +1,6 @@
-# node template
+# node github action template
 
-这是一个 node 模板项目，可以基于此项目快速搭建自己的 node 项目。
+这是一个 node github action 模板项目，可以基于此项目快速搭建自己的 node 项目的自动化流程。
 
 ## 📦 包含功能
 
