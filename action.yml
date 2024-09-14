@@ -2,6 +2,10 @@ name: "Node github action template"
 description: "This is a template for creating a Node.js Github action"
 author: "xiaohuohumax"
 inputs:
+  token:
+    required: true
+    description: "The Github token for authentication"
+    default: ${{ github.token }}
   message:
     required: true
     description: "The message to print"
