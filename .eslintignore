@@ -1,6 +1,0 @@
-node_modules
-.vscode
-.changeset
-docs/.vitepress/dist
-docs/.vitepress/cache
-!docs/.vitepress
