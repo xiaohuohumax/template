@@ -54,7 +54,7 @@
     "vsce-package": "vsce package --no-dependencies"
   },
   "dependencies": {
-    "jsonc-parser": "^3.2.1"
+    "jsonc-parser": "^3.3.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
@@ -68,7 +68,7 @@
     "@vscode/vsce": "^3.1.1",
     "commitizen": "^4.3.1",
     "cz-git": "^1.10.0",
-    "eslint": "^9.10.0",
+    "eslint": "^9.11.1",
     "message": "workspace:^",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.3.3",
