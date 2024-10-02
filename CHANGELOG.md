@@ -1,5 +1,11 @@
 # node-vue-template
 
+## 2.0.0
+
+### Major Changes
+
+- 依赖包升级
+
 ## 1.2.0
 
 ### Minor Changes

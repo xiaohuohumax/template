@@ -1,7 +1,7 @@
 {
   "name": "node-vue-template",
   "type": "module",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "private": true,
   "description": "vue template",
   "author": {
@@ -31,10 +31,10 @@
     "release": "npm run build && changeset publish"
   },
   "dependencies": {
-    "axios": "^1.6.8",
-    "pinia": "^2.1.7",
-    "vue": "^3.4.23",
-    "vue-router": "^4.3.2"
+    "axios": "^1.7.7",
+    "pinia": "^2.2.4",
+    "vue": "^3.5.10",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
@@ -42,14 +42,14 @@
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue": "^5.1.4",
     "commitizen": "^4.3.0",
-    "cz-git": "^1.9.1",
+    "cz-git": "^1.10.0",
     "eslint": "^9.10.0",
-    "eslint-plugin-vue": "^9.24.0",
+    "eslint-plugin-vue": "^9.28.0",
     "simple-git-hooks": "^2.11.1",
-    "unocss": "^0.59.4",
-    "vite": "^5.2.10",
+    "unocss": "^0.63.2",
+    "vite": "^5.4.8",
     "vue-tsc": "^2.0.13"
   },
   "simple-git-hooks": {
