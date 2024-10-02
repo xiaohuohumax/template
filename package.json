@@ -38,8 +38,8 @@
     "@commitlint/config-conventional": "^19.2.2",
     "commitizen": "^4.3.0",
     "cz-git": "^1.9.1",
-    "eslint": "^9.10.0",
-    "rimraf": "^5.0.5",
+    "eslint": "^9.11.1",
+    "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1"
   },
   "simple-git-hooks": {
