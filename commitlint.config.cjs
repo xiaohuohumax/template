@@ -1,7 +1,7 @@
 /** @type {import('cz-git').UserConfig} */
 // eslint-disable-next-line no-undef
 module.exports = {
-  ignores: [(commit) => commit.includes('init')],
+  ignores: [commit => commit.includes('init')],
   extends: ['@commitlint/config-conventional'],
   rules: {
     'body-leading-blank': [2, 'always'],
@@ -26,7 +26,7 @@ module.exports = {
         'build',
         'ci',
         'revert',
-        'chore'
+        'chore',
       ],
     ],
   },
@@ -52,28 +52,28 @@ module.exports = {
       footerPrefixesSelect: '[可选]选择关联issue前缀:',
       customFooterPrefix: '输入自定义issue前缀:',
       footer: '[可选]列举关联issue。例如: #31, #I3244:',
-      confirmCommit: '是否提交或修改?:'
+      confirmCommit: '是否提交或修改?:',
     },
     types: [
       {
         value: 'feat',
         name: 'feat:      ✨ 新增功能 | Introducing new features',
-        emoji: ':sparkles:'
+        emoji: ':sparkles:',
       },
       {
         value: 'fix',
         name: 'fix:       🐛 修复缺陷 | Fixing a bug',
-        emoji: ':bug:'
+        emoji: ':bug:',
       },
       {
         value: 'init',
         name: 'init:      🎉 初始项目 | Initial commit',
-        emoji: ':tada:'
+        emoji: ':tada:',
       },
       {
         value: 'art',
         name: 'art:       🎨 结构改进 | Improving structure / format of the code',
-        emoji: ':art:'
+        emoji: ':art:',
       },
       {
         value: 'docs',
@@ -113,7 +113,7 @@ module.exports = {
       {
         value: 'revert',
         name: 'revert:    🔨 回退代码 | Revert to a commit',
-        emoji: ':hammer:'
+        emoji: ':hammer:',
       },
       {
         value: 'chore',
@@ -146,4 +146,4 @@ module.exports = {
     defaultIssues: '',
     defaultSubject: '',
   },
-};
+}
