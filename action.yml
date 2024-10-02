@@ -1,18 +1,18 @@
-name: "Node github action template"
-description: "This is a template for creating a Node.js Github action"
-author: "xiaohuohumax"
+name: Node github action template
+description: This is a template for creating a Node.js Github action
+author: xiaohuohumax
 inputs:
   token:
     required: true
-    description: "The Github token for authentication"
+    description: The Github token for authentication
     default: ${{ github.token }}
   message:
     required: true
-    description: "The message to print"
-    default: "Hello, world!"
+    description: The message to print
+    default: 'Hello, world!'
 outputs:
   result:
-    description: "The result of the action"
+    description: The result of the action
 runs:
-  using: "node20"
-  main: "dist/index.js"
+  using: node20
+  main: dist/index.js

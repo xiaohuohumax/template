@@ -16,6 +16,6 @@ jobs:
         uses: ./
         id: test-action
         with:
-          message: "Hello, World!"
+          message: 'Hello, World!'
       - name: Print Output
-        run: "echo Output: ${{ steps.test-action.outputs.result }}"
+        run: 'echo Output: ${{ steps.test-action.outputs.result }}'
