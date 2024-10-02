@@ -35,8 +35,8 @@ jobs:
           publish: npm run release
           # 只发布release
           # publish: npx changeset tag
-          commit: "chore: :rewind: release version"
-          title: "chore: release version"
+          commit: 'chore: :rewind: release version'
+          title: 'chore: release version'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
