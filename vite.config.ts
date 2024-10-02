@@ -1,11 +1,11 @@
+import path from 'node:path'
 import { defineConfig } from 'vite'
-import path from 'path'
 
 export default defineConfig({
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src")
-    }
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
   build: {
     rollupOptions: {
@@ -17,7 +17,7 @@ export default defineConfig({
         format: 'esm',
         // preserveModules: true,
         entryFileNames: '[name].mjs',
-      }
-    }
-  }
+      },
+    },
+  },
 })
