@@ -1,5 +1,11 @@
 # node-vitepress-template
 
+## 2.0.0
+
+### Major Changes
+
+- 依赖包升级
+
 ## 1.1.0
 
 ### Minor Changes
