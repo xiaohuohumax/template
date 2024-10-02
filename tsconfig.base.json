@@ -3,11 +3,11 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
+    "resolveJsonModule": true,
     "allowJs": false,
     "strict": true,
-    "resolveJsonModule": true,
     "noUnusedLocals": true,
-    "esModuleInterop": true,
-    "removeComments": false
+    "removeComments": false,
+    "esModuleInterop": true
   }
 }

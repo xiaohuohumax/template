@@ -1,4 +1,4 @@
-import { CreateAxiosDefaults } from 'axios';
+import type { CreateAxiosDefaults } from 'axios'
 
 export interface AppConfig {
   axios: {
@@ -11,9 +11,9 @@ const config: AppConfig = {
     create: {
       baseURL: '/api/',
       timeout: 5000,
-      headers: { 'Content-Type': 'application/json;charset=UTF-8' }
-    }
-  }
-};
+      headers: { 'Content-Type': 'application/json;charset=UTF-8' },
+    },
+  },
+}
 
-export default config;
+export default config

@@ -1,9 +1,9 @@
-import { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router'
 
 export const names = {
   Main: 'Main',
   NotFound: 'NotFound',
-};
+}
 
 const routes: RouteRecordRaw[] = [
   {
@@ -15,13 +15,13 @@ const routes: RouteRecordRaw[] = [
         name: names.Main,
         component: () => import('../views/MainView.vue'),
       },
-    ]
+    ],
   },
   {
     path: '/:pathMatch(.*)*',
     name: names.NotFound,
     component: () => import('../views/error/NotFoundView.vue'),
-  }
-];
+  },
+]
 
-export default routes;
+export default routes

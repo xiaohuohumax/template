@@ -3,6 +3,7 @@
     "editorconfig.editorconfig",
     "yoavbls.pretty-ts-errors",
     "vue.volar",
-    "antfu.unocss"
+    "antfu.unocss",
+    "dbaeumer.vscode-eslint"
   ]
 }

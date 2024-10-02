@@ -1,18 +1,18 @@
-import vue from '@vitejs/plugin-vue';
-import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
-import { InputOption } from 'rollup';
-import UnoCSS from 'unocss/vite';
+import type { InputOption } from 'rollup'
+import path from 'node:path'
+import vue from '@vitejs/plugin-vue'
+import UnoCSS from 'unocss/vite'
+import { defineConfig, loadEnv } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, 'env');
+  const env = loadEnv(mode, 'env')
 
   const input: InputOption = {
-    'index': './index.html'
-  };
+    index: './index.html',
+  }
   if (env.VITE_IS_EXTRACT_APP_CONFIG === 'true') {
-    input['appConfig'] = './src/appConfig.ts';
+    input.appConfig = './src/appConfig.ts'
   }
 
   return {
@@ -24,8 +24,8 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
-        '#': path.resolve(__dirname, '')
-      }
+        '#': path.resolve(__dirname, ''),
+      },
     },
     build: {
       rollupOptions: {
@@ -35,12 +35,12 @@ export default defineConfig(({ mode }) => {
           assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
           entryFileNames({ name, isEntry }) {
             if (isEntry && name === 'appConfig') {
-              return 'appConfig-[hash].js';
+              return 'appConfig-[hash].js'
             }
-            return 'assets/[name]-[hash].js';
-          }
-        }
-      }
-    }
-  };
-});
+            return 'assets/[name]-[hash].js'
+          },
+        },
+      },
+    },
+  }
+})

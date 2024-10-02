@@ -1,9 +1,9 @@
-import { App } from 'vue';
-import './unocss';
-import pinia from './pinia';
-import router from '@/router';
+import type { App } from 'vue'
+import router from '@/router'
+import pinia from './pinia'
+import './unocss'
 
 export default function install(app: App) {
-  app.use(pinia);
-  app.use(router);
+  app.use(pinia)
+  app.use(router)
 }
