@@ -17,21 +17,24 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Set node version to 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-          cache: npm
+          cache: pnpm
 
       - name: Install
-        run: npm run install:all
+        run: pnpm install
 
       - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: npx changeset tag
+          publish: pnpm changeset tag
           commit: 'chore: :rewind: release version'
           title: 'chore: release version'
         env:

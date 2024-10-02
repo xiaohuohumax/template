@@ -1,3 +1,4 @@
+import type { Message, MessageCommand, ShowMessageMessage } from 'message'
 import type { WebviewApi } from 'vscode-webview'
 
 export interface CommandMessageListener {

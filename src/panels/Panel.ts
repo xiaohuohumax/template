@@ -1,3 +1,4 @@
+import type { Message, MessageListener } from 'message'
 import type { Disposable, Webview, WebviewPanel } from 'vscode'
 import { l10n, Uri, ViewColumn, window } from 'vscode'
 

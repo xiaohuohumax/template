@@ -1,3 +1,4 @@
+import type { ShowMessageMessage } from 'message'
 import log from '#/src/log'
 import HelloPanel from '#/src/panels/HelloPanel'
 import { window } from 'vscode'

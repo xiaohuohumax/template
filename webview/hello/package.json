@@ -1,7 +1,7 @@
 {
   "name": "export-profiles",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@vscode/l10n": "^0.0.18",
-    "node-vscode-extension-template": "file:../..",
+    "message": "workspace:^",
     "vue": "^3.5.10"
   },
   "devDependencies": {

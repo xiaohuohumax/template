@@ -15,9 +15,9 @@
       ]
     },
     {
-      "type": "npm",
+      "type": "shell",
       "label": "watch-extension",
-      "script": "watch",
+      "command": "pnpm watch",
       "isBackground": true,
       "presentation": {
         "reveal": "never"
@@ -35,9 +35,9 @@
       }
     },
     {
-      "type": "npm",
+      "type": "shell",
       "label": "watch-hello",
-      "script": "watch:hello",
+      "command": "pnpm watch:hello",
       "isBackground": true,
       "presentation": {
         "reveal": "never"

@@ -1,0 +1,7 @@
+{
+  "name": "message",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "types": "types/index.d.ts"
+}

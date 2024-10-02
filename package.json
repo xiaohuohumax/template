@@ -4,6 +4,7 @@
   "displayName": "Vscode Extension Template",
   "version": "1.2.0",
   "private": true,
+  "packageManager": "pnpm@9.0.4",
   "description": "vscode extension template",
   "author": {
     "name": "xiaohuohumax",
@@ -37,21 +38,20 @@
     ]
   },
   "scripts": {
-    "install:all": "npm install --frozen-lockfile && npm install --prefix=webview/hello --frozen-lockfile",
     "commit": "git add . && cz",
     "postinstall": "simple-git-hooks",
     "changeset": "changeset",
-    "release": "npm run build && changeset publish",
-    "vscode:prepublish": "npm run compile",
-    "compile": "npm run build",
-    "build": "npm run build:hello && vite build --emptyOutDir",
-    "build:hello": "npm run build --prefix=webview/hello",
+    "release": "pnpm build && changeset publish",
+    "vscode:prepublish": "pnpm compile",
+    "compile": "pnpm build",
+    "build": "pnpm build:hello && vite build --emptyOutDir",
+    "build:hello": "pnpm --filter=./webview/hello build",
     "watch": "vite build --watch --mode development --emptyOutDir",
-    "watch:hello": "npm run watch --prefix=webview/hello",
+    "watch:hello": "pnpm --filter=./webview/hello watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "vsce-publish": "vsce publish",
-    "vsce-package": "vsce package"
+    "vsce-publish": "vsce publish --no-dependencies",
+    "vsce-package": "vsce package --no-dependencies"
   },
   "dependencies": {
     "jsonc-parser": "^3.2.1"
@@ -62,15 +62,17 @@
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
-    "@types/node": "18.x",
+    "@types/node": "22.7.4",
     "@types/vscode": "^1.87.0",
-    "@vscode/test-web": "^0.0.53",
-    "commitizen": "^4.3.0",
-    "cz-git": "^1.9.1",
+    "@vscode/test-web": "^0.0.61",
+    "@vscode/vsce": "^3.1.1",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.10.0",
     "eslint": "^9.10.0",
+    "message": "workspace:^",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.3.3",
-    "vite": "^5.2.10"
+    "vite": "^5.4.8"
   },
   "simple-git-hooks": {
     "commit-msg": "npx commitlint --edit $1"

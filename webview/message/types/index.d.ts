@@ -1,12 +1,12 @@
 /**
  * 消息命令
  */
-type MessageCommand = 'showMessage'
+export type MessageCommand = 'showMessage'
 
 /**
  * 消息接口
  */
-interface Message<T = any> {
+export interface Message<T = any> {
   command: MessageCommand
   data: T
 }
@@ -14,7 +14,7 @@ interface Message<T = any> {
 /**
  * 显示消息
  */
-type ShowMessageMessage = Message<{
+export type ShowMessageMessage = Message<{
   type: 'info' | 'error' | 'warning'
   message: string
 }>
@@ -22,6 +22,6 @@ type ShowMessageMessage = Message<{
 /**
  * 消息监听器
  */
-interface MessageListener<T = any> {
+export interface MessageListener<T = any> {
   (e: Message<T>): any
 }
