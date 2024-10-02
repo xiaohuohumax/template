@@ -1,7 +1,7 @@
 {
   "name": "node-bookmarklet-vue-template",
   "type": "module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "node bookmarklet vue template",
   "author": {
@@ -40,16 +40,16 @@
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue": "^5.1.4",
     "@xiaohuohumax/vite-plugin-bookmarklet": "^1.0.0",
     "commitizen": "^4.3.0",
-    "cz-git": "^1.9.1",
-    "eslint": "^9.10.0",
-    "eslint-plugin-vue": "^9.26.0",
+    "cz-git": "^1.10.0",
+    "eslint": "^9.11.1",
+    "eslint-plugin-vue": "^9.28.0",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.2.2",
-    "vite": "^5.2.12",
-    "vue-tsc": "^2.0.6"
+    "vite": "^5.4.8",
+    "vue-tsc": "^2.1.6"
   },
   "simple-git-hooks": {
     "commit-msg": "npx commitlint --edit $1"
