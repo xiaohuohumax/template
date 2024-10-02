@@ -1,21 +1,21 @@
-import { Disposable, Uri, ViewColumn, Webview, WebviewPanel, l10n, window } from 'vscode';
+import type { Disposable, Webview, WebviewPanel } from 'vscode'
+import { l10n, Uri, ViewColumn, window } from 'vscode'
 
 /**
  * 获取webview相对路径
  * @param webview webview
  * @param extensionUri 扩展Uri
  * @param pathList 路径列表
- * @returns 
+ * @returns 相对路径
  */
 function _getUri(webview: Webview, extensionUri: Uri, ...pathList: string[]) {
-  return webview.asWebviewUri(Uri.joinPath(extensionUri, ...pathList));
+  return webview.asWebviewUri(Uri.joinPath(extensionUri, ...pathList))
 }
 
 export class Panel {
-
-  private panel: WebviewPanel | undefined;
-  private disposables: Disposable[] = [];
-  private listeners: MessageListener[] = [];
+  private panel: WebviewPanel | undefined
+  private disposables: Disposable[] = []
+  private listeners: MessageListener[] = []
 
   constructor(public webviewId: string, public webviewTitle: string, public webviewBuildPath: string[]) { }
 
@@ -23,11 +23,11 @@ export class Panel {
    * 生成html内容
    * @param webview webview
    * @param extensionUri 扩展Uri
-   * @returns 
+   * @returns html内容
    */
   private getWebviewContent(webview: Webview, extensionUri: Uri) {
-    const stylesUri = _getUri(webview, extensionUri, ...this.webviewBuildPath, 'assets', 'index.css');
-    const scriptUri = _getUri(webview, extensionUri, ...this.webviewBuildPath, 'assets', 'index.js');
+    const stylesUri = _getUri(webview, extensionUri, ...this.webviewBuildPath, 'assets', 'index.css')
+    const scriptUri = _getUri(webview, extensionUri, ...this.webviewBuildPath, 'assets', 'index.js')
 
     return `
     <!DOCTYPE html>
@@ -44,7 +44,7 @@ export class Panel {
         <script type="module" src="${scriptUri}"></script>
       </body>
     </html>
-  `;
+  `
   }
 
   /**
@@ -52,32 +52,31 @@ export class Panel {
    * @param message 消息
    */
   postMessage(message: Message) {
-    this.panel?.webview.postMessage(message);
+    this.panel?.webview.postMessage(message)
   }
-
 
   /**
    * 监听消息
    * @param listener 监听器
    */
   addWebviewMessageListener(listener: MessageListener) {
-    this.listeners.push(listener);
+    this.listeners.push(listener)
   }
 
   /**
    * 渲染面板
    * @param extensionUri 插件Uri
-   * @returns 
    */
   render(extensionUri: Uri) {
     if (this.panel) {
       if (import.meta.env.PROD) {
         // 如果面板已经存在，则直接显示
-        this.panel.reveal(ViewColumn.One);
-        return;
-      } else {
+        this.panel.reveal(ViewColumn.One)
+        return
+      }
+      else {
         // 开发环境，如果面板已经存在，则销毁，方便调试界面
-        this.dispose();
+        this.dispose()
       }
     }
     const panel = window.createWebviewPanel(
@@ -89,44 +88,43 @@ export class Panel {
         retainContextWhenHidden: true,
         localResourceRoots: [
           Uri.joinPath(extensionUri, 'out'),
-          Uri.joinPath(extensionUri, ...this.webviewBuildPath)
+          Uri.joinPath(extensionUri, ...this.webviewBuildPath),
         ],
-      }
-    );
+      },
+    )
     // 监听面板关闭
-    panel.onDidDispose(() => this.dispose(), null, this.disposables);
+    panel.onDidDispose(() => this.dispose(), null, this.disposables)
     // 加载html内容
-    panel.webview.html = this.getWebviewContent(panel.webview, extensionUri);
+    panel.webview.html = this.getWebviewContent(panel.webview, extensionUri)
     // 添加监听器
     this.listeners.forEach(listener => panel.webview.onDidReceiveMessage(
       listener,
       undefined,
-      this.disposables
-    ));
-    this.panel = panel;
+      this.disposables,
+    ))
+    this.panel = panel
   }
 
   /**
    * 销毁面板
    */
   dispose() {
-    this.panel?.dispose();
-    this.panel = undefined;
+    this.panel?.dispose()
+    this.panel = undefined
 
     while (this.disposables.length) {
-      const disposable = this.disposables.pop();
+      const disposable = this.disposables.pop()
       if (disposable) {
-        disposable.dispose();
+        disposable.dispose()
       }
     }
   }
 
   /**
    * 是否已经初始化
-   * @returns 
+   * @returns 是否已经初始化
    */
   isInit() {
-    return this.panel !== undefined;
+    return this.panel !== undefined
   }
-
 }

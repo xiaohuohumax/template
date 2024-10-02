@@ -1,12 +1,18 @@
-# node-template
+# node-vscode-extension-template
 
-## 0.1.0
+## 1.2.0
+
+### Minor Changes
+
+- 添加 antfu 的 lint 方案
+
+## 1.1.0
 
 ### Minor Changes
 
 - 提取 Panel 类
 
-## 0.0.1
+## 1.0.1
 
 ### Patch Changes
 

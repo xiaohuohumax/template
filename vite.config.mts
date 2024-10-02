@@ -1,5 +1,6 @@
-import path from 'path';
-import { ConfigEnv, UserConfig, defineConfig } from 'vite';
+import type { ConfigEnv, UserConfig } from 'vite'
+import path from 'node:path'
+import { defineConfig } from 'vite'
 
 export default defineConfig((env: ConfigEnv): UserConfig => {
   return {
@@ -7,8 +8,8 @@ export default defineConfig((env: ConfigEnv): UserConfig => {
     resolve: {
       alias: {
         '#': path.resolve(__dirname, ''),
-        '@': path.resolve(__dirname, './src')
-      }
+        '@': path.resolve(__dirname, './src'),
+      },
     },
     build: {
       minify: false,
@@ -21,10 +22,10 @@ export default defineConfig((env: ConfigEnv): UserConfig => {
           {
             dir: 'out',
             format: 'cjs',
-            entryFileNames: '[name].js'
-          }
-        ]
-      }
-    }
-  };
-});
+            entryFileNames: '[name].js',
+          },
+        ],
+      },
+    },
+  }
+})

@@ -1,4 +1,4 @@
-# vscode extension template
+# node vscode extension template
 
 这是一个 vscode 插件模板，包含了 git commit 规范检查、changeset 版本管理、github actions 自动发布等功能。
 

@@ -1,16 +1,16 @@
 /**
  * app key
  */
-export const APP = 'vscode-extension-template';
+export const APP = 'vscode-extension-template'
 
 /**
  * command keys
  */
 export const CMD_KEYS = {
-  helloWorld: APP + '.helloWorld'
-};
+  helloWorld: `${APP}.helloWorld`,
+}
 
 /**
  * config key
  */
-export const CONFIG_KEY = 'nodeVSCodeExtensionTemplate';
+export const CONFIG_KEY = 'nodeVSCodeExtensionTemplate'

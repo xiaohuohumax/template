@@ -1,42 +1,41 @@
-import { LogLevel, window } from 'vscode';
-import util from 'util';
+import util from 'util'
+import { LogLevel, window } from 'vscode'
 
-const logLevel: LogLevel = LogLevel[import.meta.env.VITE_LOG_LEVEL];
+const logLevel: LogLevel = LogLevel[import.meta.env.VITE_LOG_LEVEL]
 
 const outputChannel = logLevel !== LogLevel.Off
   ? window.createOutputChannel(import.meta.env.VITE_OUTPUT_CHANNEL_NAME)
-  : null;
+  : null
 
 /**
  * 格式化日志消息
  * @param msgs 日志内容
- * @returns 
+ * @returns 格式化后的日志消息
  */
 function formatMessage(...msgs: unknown[]): string {
-  return msgs.map(m => {
+  return msgs.map((m) => {
     if (typeof m === 'string') {
-      return m;
+      return m
     }
-    return util.inspect(m, false, null, false);
-  }).join(' ');
+    return util.inspect(m, false, null, false)
+  }).join(' ')
 }
 
 /**
  * 打印日志
  * @param level 日志等级
  * @param msgs 日志内容
- * @returns 
  */
 function base(level: LogLevel, ...msgs: unknown[]) {
   if (logLevel > level || logLevel === LogLevel.Off) {
-    return;
+    return
   }
 
   // 简单获取调用信息
-  let caller = '';
-  const stack = new Error().stack;
+  let caller = ''
+  const stack = new Error('error').stack
   if (stack) {
-    caller = stack.split('\n')[3]?.replace(/\s*at\s*/i, '');
+    caller = stack.split('\n')[3]?.replace(/\s*at\s*/i, '')
   }
 
   const replaces: [string, string][] = [
@@ -48,34 +47,34 @@ function base(level: LogLevel, ...msgs: unknown[]) {
     [':level', LogLevel[level].padStart(7, ' ')],
     // 调用者信息
     [':caller', caller],
-  ];
+  ]
 
   const line = replaces.reduce(
     (f, [key, value]) => f.replace(key, value),
-    import.meta.env.VITE_LOG_FORMAT
-  );
+    import.meta.env.VITE_LOG_FORMAT,
+  )
 
-  outputChannel?.appendLine(line);
+  outputChannel?.appendLine(line)
 }
 
 function print(level: LogLevel, ...msgs: unknown[]) {
-  base(level, ...msgs);
+  base(level, ...msgs)
 }
 
 function info(...msgs: unknown[]) {
-  base(LogLevel.Info, ...msgs);
+  base(LogLevel.Info, ...msgs)
 }
 
 function debug(...msgs: unknown[]) {
-  base(LogLevel.Debug, ...msgs);
+  base(LogLevel.Debug, ...msgs)
 }
 
 function warning(...msgs: unknown[]) {
-  base(LogLevel.Warning, ...msgs);
+  base(LogLevel.Warning, ...msgs)
 }
 
 function error(...msgs: unknown[]) {
-  base(LogLevel.Error, ...msgs);
+  base(LogLevel.Error, ...msgs)
 }
 
 /**
@@ -83,7 +82,7 @@ function error(...msgs: unknown[]) {
  * @param preserveFocus 是否显示
  */
 function show(preserveFocus?: boolean) {
-  outputChannel?.show(preserveFocus);
+  outputChannel?.show(preserveFocus)
 }
 
 export default {
@@ -92,5 +91,5 @@ export default {
   debug,
   warning,
   error,
-  show
-};
+  show,
+}

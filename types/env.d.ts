@@ -6,7 +6,7 @@ interface ImportMetaEnv {
 
   /**
    * 日志打印格式
-   * 
+   *
    * ```
    * :time    时间戳
    * :level   等级

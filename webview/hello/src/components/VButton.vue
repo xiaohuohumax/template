@@ -3,6 +3,7 @@
     <slot />
   </button>
 </template>
+
 <style scoped>
 .btn {
   border: var(--vscode-button-border);

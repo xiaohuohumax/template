@@ -12,7 +12,7 @@
       "dependsOn": [
         "watch-extension",
         "watch-hello"
-      ],
+      ]
     },
     {
       "type": "npm",

@@ -1,7 +1,7 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import 'uno.css';
-import './index.css';
+import { createApp } from 'vue'
+import App from './App.vue'
+import 'uno.css'
+import './index.css'
 
-const app = createApp(App);
-app.mount('#app');
+const app = createApp(App)
+app.mount('#app')

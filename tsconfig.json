@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "moduleResolution": "Bundler",
     "paths": {
       "#/*": [
         "./*"
@@ -13,12 +14,11 @@
       "vite/client",
       "node"
     ],
-    "noEmit": true,
+    "allowImportingTsExtensions": true,
     "declaration": true,
+    "noEmit": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": true
+    "skipLibCheck": true
   },
   "include": [
     "src",
