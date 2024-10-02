@@ -18,12 +18,6 @@
 
 ## ⚡ 注意
 
-#### 🤖 github actions 自动发包
-
-1. 将项目根目录下的 `_github` 改为 `.github`
-2. 修改仓库权限，允许 actions 运行
-3. 发布npm包需要在仓库下创建 `NPM_PUBLISH_TOKEN`的 npm token
-
 #### ⏫ changesets 版本管理
 
 1. 修改 `.changeset/config.json` 的 `repo`(仓库地址) 和 `baseBranch`(分支名) 字段
