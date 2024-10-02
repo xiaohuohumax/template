@@ -1,10 +1,10 @@
-import { defineConfig } from 'rollup';
-import esbuild from 'rollup-plugin-esbuild';
-import dts from 'rollup-plugin-dts';
+import { defineConfig } from 'rollup'
+import dts from 'rollup-plugin-dts'
+import esbuild from 'rollup-plugin-esbuild'
 
 const entries = {
-  'index': './src/index.ts',
-};
+  index: './src/index.ts',
+}
 
 export default defineConfig([
   {
@@ -14,7 +14,7 @@ export default defineConfig([
       format: 'esm',
       entryFileNames: '[name].mjs',
     },
-    plugins: [esbuild()]
+    plugins: [esbuild()],
   },
   {
     input: entries,
@@ -24,7 +24,7 @@ export default defineConfig([
       exports: 'named',
       entryFileNames: '[name].cjs',
     },
-    plugins: [esbuild()]
+    plugins: [esbuild()],
   },
   {
     input: entries,
@@ -33,6 +33,6 @@ export default defineConfig([
       format: 'esm',
       entryFileNames: '[name].d.ts',
     },
-    plugins: [dts()]
-  }
-]);
+    plugins: [dts()],
+  },
+])

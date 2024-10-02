@@ -1,4 +1,4 @@
-# monorepo template
+# node monorepo template
 
 这是一个 monorepo 模板, 可以快速搭建 monorepo 项目。
 

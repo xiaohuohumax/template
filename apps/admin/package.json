@@ -1,15 +1,15 @@
 {
   "name": "admin",
-  "version": "1.0.1",
-  "description": "",
   "type": "module",
+  "version": "1.0.1",
   "private": true,
+  "description": "",
+  "author": "xiaohuohumax",
+  "license": "MIT",
+  "keywords": [],
   "scripts": {
     "build": "vite-node src/index.ts"
   },
-  "keywords": [],
-  "author": "xiaohuohumax",
-  "license": "MIT",
   "dependencies": {
     "utils": "workspace:^"
   },

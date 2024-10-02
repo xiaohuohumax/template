@@ -1,27 +1,27 @@
 {
   "name": "utils",
+  "type": "module",
   "version": "1.0.1",
   "private": true,
   "description": "",
-  "type": "module",
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.cjs",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "build": "rollup -c"
-  },
-  "keywords": [],
   "author": "xiaohuohumax",
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
+  "keywords": [],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c"
   },
   "devDependencies": {
     "rollup": "^4.16.0",
