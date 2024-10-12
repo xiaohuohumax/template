@@ -1,7 +1,7 @@
 {
   "name": "utils",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "description": "",
   "author": "xiaohuohumax",
@@ -10,8 +10,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": {
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "default": "./dist/index.cjs"
+      }
     }
   },
   "main": "./dist/index.mjs",
