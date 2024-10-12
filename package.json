@@ -1,9 +1,9 @@
 {
-  "name": "node-template",
+  "name": "node-rollup",
   "type": "module",
   "version": "2.0.0",
   "private": true,
-  "description": "node template",
+  "description": "node rollup",
   "author": {
     "name": "xiaohuohumax",
     "url": "https://github.com/xiaohuohumax"
@@ -15,12 +15,13 @@
   },
   "keywords": [
     "node",
-    "template",
+    "rollup",
     "commitizen",
     "changeset"
   ],
   "scripts": {
-    "build": "echo building...",
+    "build": "rollup -c rollup.config.ts --configPlugin esbuild",
+    "build:watch": "pnpm build --watch",
     "commit": "git add . && cz",
     "postinstall": "simple-git-hooks",
     "changeset": "changeset",
@@ -34,9 +35,16 @@
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
+    "@rollup/plugin-commonjs": "^27.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
     "commitizen": "^4.3.1",
     "cz-git": "^1.10.0",
+    "esbuild": "^0.24.0",
     "eslint": "^9.11.1",
+    "rollup": "^4.24.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-esbuild": "^6.1.1",
     "simple-git-hooks": "^2.11.1"
   },
   "simple-git-hooks": {

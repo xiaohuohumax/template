@@ -1,4 +1,4 @@
-# node-template
+# node-rollup
 
 ## 2.0.0
 

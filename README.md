@@ -1,6 +1,6 @@
-# node template
+# node rollup
 
-这是一个 node 模板项目，可以基于此项目快速搭建自己的 node 项目。
+这是一个 rollup 模板项目，可以基于此项目快速搭建自己的 rollup 打包项目。
 
 ## 📦 包含功能
 
