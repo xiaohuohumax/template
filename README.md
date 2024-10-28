@@ -1,1 +1,1 @@
-# ts template
+# ts github action template

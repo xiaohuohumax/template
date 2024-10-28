@@ -1,4 +1,4 @@
-# ts-template
+# ts-github-action-template
 
 ## 1.0.0
 
