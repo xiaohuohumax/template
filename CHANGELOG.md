@@ -1,4 +1,4 @@
-# ts-template
+# ts-vitepress-template
 
 ## 1.0.0
 

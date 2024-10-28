@@ -1,1 +1,1 @@
-# ts template
+# ts vitepress template

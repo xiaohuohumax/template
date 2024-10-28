@@ -89,7 +89,10 @@
     "antfu",
     "breakline",
     "commitlint",
+    "docsearch",
+    "frontmatter",
     "prefixs",
-    "tada"
+    "tada",
+    "vitepress"
   ]
 }
