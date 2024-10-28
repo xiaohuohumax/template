@@ -1,4 +1,4 @@
-# ts-template
+# ts-node-template
 
 ## 1.0.0
 

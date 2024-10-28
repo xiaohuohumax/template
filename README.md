@@ -1,1 +1,1 @@
-# ts template
+# ts node template
