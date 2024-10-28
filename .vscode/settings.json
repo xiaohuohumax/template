@@ -90,6 +90,7 @@
     "breakline",
     "commitlint",
     "prefixs",
-    "tada"
+    "tada",
+    "vite"
   ]
 }

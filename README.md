@@ -1,1 +1,1 @@
-# ts bookmarklet template
+# ts bookmarklet vue template

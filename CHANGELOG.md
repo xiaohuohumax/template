@@ -1,4 +1,4 @@
-# ts-bookmarklet-template
+# ts-bookmarklet-vue-template
 
 ## 1.0.0
 
