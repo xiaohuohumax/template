@@ -1,1 +1,1 @@
-# ts template
+# ts bookmarklet template

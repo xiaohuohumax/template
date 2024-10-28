@@ -1,9 +1,9 @@
 {
-  "name": "ts-template",
+  "name": "ts-bookmarklet-template",
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "description": "ts template",
+  "description": "ts bookmarklet template",
   "author": {
     "name": "xiaohuohumax",
     "url": "https://github.com/xiaohuohumax"
@@ -15,9 +15,12 @@
   },
   "keywords": [
     "typescript",
+    "bookmarklet",
     "template"
   ],
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
     "commit": "git add . && cz",
     "postinstall": "simple-git-hooks",
     "changeset": "changeset",
@@ -30,10 +33,12 @@
     "@changesets/cli": "^2.27.9",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@xiaohuohumax/vite-plugin-bookmarklet": "^1.0.1",
     "commitizen": "^4.3.1",
     "cz-git": "^1.10.1",
     "eslint": "^9.13.0",
-    "simple-git-hooks": "^2.11.1"
+    "simple-git-hooks": "^2.11.1",
+    "vite": "^5.4.10"
   },
   "simple-git-hooks": {
     "commit-msg": "npx commitlint --edit $1",

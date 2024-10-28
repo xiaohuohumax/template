@@ -1,4 +1,4 @@
-# ts-template
+# ts-bookmarklet-template
 
 ## 1.0.0
 
