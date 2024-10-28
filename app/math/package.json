@@ -1,0 +1,30 @@
+{
+  "name": "math",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "math",
+  "author": {
+    "name": "xiaohuohumax",
+    "url": "https://github.com/xiaohuohumax"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaohuohumax/template.git"
+  },
+  "keywords": [
+    "typescript",
+    "math",
+    "template"
+  ],
+  "scripts": {
+    "dev": "vite-node src/index.ts"
+  },
+  "dependencies": {
+    "utils": "workspace:*"
+  },
+  "devDependencies": {
+    "vite-node": "^2.1.4"
+  }
+}

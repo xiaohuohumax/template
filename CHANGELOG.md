@@ -1,4 +1,4 @@
-# ts-template
+# ts-monorepo-template
 
 ## 1.0.0
 
