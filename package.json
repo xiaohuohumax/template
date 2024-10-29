@@ -1,9 +1,11 @@
 {
-  "name": "ts-template",
-  "type": "module",
+  "publisher": "xiaohuohumax",
+  "name": "ts-vscode-extension-template",
+  "displayName": "Typescript VSCode Extension Template",
   "version": "1.0.0",
   "private": true,
-  "description": "ts template",
+  "packageManager": "pnpm@9.0.4",
+  "description": "ts vscode extension template",
   "author": {
     "name": "xiaohuohumax",
     "url": "https://github.com/xiaohuohumax"
@@ -15,14 +17,56 @@
   },
   "keywords": [
     "typescript",
+    "vscode",
+    "extension",
     "template"
   ],
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "l10n": "./l10n",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Show Clock",
+      "properties": {
+        "show-clock.size": {
+          "type": "number",
+          "description": "%show-clock.config.size.description%",
+          "default": 9,
+          "minimum": 3
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "show-clock.view",
+        "title": "%show-clock.view.title%"
+      }
+    ]
+  },
   "scripts": {
+    "build": "pnpm build:view && vite build --emptyOutDir",
+    "build:view": "pnpm --filter=./packages/view build",
+    "watch": "vite build --watch --emptyOutDir --mode development",
+    "watch:view": "pnpm --filter=./packages/view watch",
     "commit": "git add . && cz",
     "postinstall": "simple-git-hooks",
     "changeset": "changeset",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "vscode:prepublish": "pnpm compile",
+    "compile": "pnpm build",
+    "vsce-publish": "vsce publish --no-dependencies",
+    "vsce-package": "vsce package --no-dependencies"
+  },
+  "dependencies": {
+    "context": "workspace:*"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",
@@ -30,6 +74,8 @@
     "@changesets/cli": "^2.27.9",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@types/vscode": "^1.87.0",
+    "@vscode/vsce": "^3.2.1",
     "commitizen": "^4.3.1",
     "cz-git": "^1.10.1",
     "eslint": "^9.13.0",

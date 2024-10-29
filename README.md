@@ -1,1 +1,1 @@
-# ts template
+# ts vscode extension template

@@ -1,0 +1,9 @@
+{
+  "name": "context",
+  "version": "1.0.0",
+  "license": "MIT",
+  "types": "types/index.d.ts",
+  "files": [
+    "types"
+  ]
+}

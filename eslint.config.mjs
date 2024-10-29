@@ -5,6 +5,7 @@ export default antfu({
     indent: 2,
     quotes: 'single',
   },
+  vue: true,
   typescript: true,
   languageOptions: {
     parserOptions: {
@@ -12,6 +13,9 @@ export default antfu({
     },
   },
   rules: {
-    'no-console': 'off',
+    'unicorn/prefer-node-protocol': 'off',
   },
+  ignores: [
+    'out/**',
+  ],
 })

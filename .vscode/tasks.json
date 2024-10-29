@@ -1,0 +1,58 @@
+// See https://go.microsoft.com/fwlink/?LinkId=733558
+// for the documentation about the tasks.json format
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "defaultBuildTask",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": [
+        "watch-extension",
+        "watch-view"
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "watch-extension",
+      "command": "pnpm watch",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": {
+          "regexp": ""
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^build started\\.\\.\\.$",
+          "endsPattern": "^built in (\\d+ms)"
+        }
+      }
+    },
+    {
+      "type": "shell",
+      "label": "watch-view",
+      "command": "pnpm watch:view",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": {
+          "regexp": ""
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^build started\\.\\.\\.$",
+          "endsPattern": "^built in (\\d+ms)"
+        }
+      }
+    }
+  ]
+}

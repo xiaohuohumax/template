@@ -1,4 +1,4 @@
-# ts-template
+# ts-vscode-extension-template
 
 ## 1.0.0
 

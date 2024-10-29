@@ -1,0 +1,24 @@
+{
+  "name": "view",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "watch": "vite build --watch --emptyOutDir --mode development",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/vscode-webview": "^1.57.5",
+    "@vscode/l10n": "^0.0.18",
+    "context": "workspace:*",
+    "vue": "^3.4.19"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "unocss": "^0.63.6",
+    "vite": "^5.4.10",
+    "vue-tsc": "^2.1.8"
+  }
+}
