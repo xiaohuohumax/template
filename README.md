@@ -1,1 +1,1 @@
-# ts template
+# ts vue template

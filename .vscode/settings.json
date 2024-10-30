@@ -89,7 +89,13 @@
     "antfu",
     "breakline",
     "commitlint",
+    "intlify",
+    "loglevel",
+    "mockjs",
+    "pinia",
     "prefixs",
-    "tada"
+    "tada",
+    "unocss",
+    "vite"
   ]
 }

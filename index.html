@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" class="loading">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <style>
+    html.loading {
+      overflow: hidden;
+    }
+
+    html.loading body>.loading-body {
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      background-color: #101014;
+    }
+
+    @keyframes loading {
+
+      0%,
+      100% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    body>.loading-body img {
+      animation: loading 3s infinite reverse;
+      display: block;
+      height: 6rem;
+    }
+
+    @keyframes load-ok {
+
+      0%,
+      60% {
+        opacity: 1;
+        background-color: #101014;
+      }
+
+      100% {
+        opacity: 0;
+        background: transparent;
+      }
+    }
+
+    html.load-ok body>.loading-body {
+      animation: load-ok 2s forwards;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loading-body" style="display: none;">
+    <img class="welcome" src="/images/welcome.svg">
+  </div>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

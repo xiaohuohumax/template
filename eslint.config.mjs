@@ -5,13 +5,11 @@ export default antfu({
     indent: 2,
     quotes: 'single',
   },
+  vue: true,
   typescript: true,
   languageOptions: {
     parserOptions: {
       warnOnUnsupportedTypeScriptVersion: false,
     },
-  },
-  rules: {
-    'no-console': 'off',
   },
 })
