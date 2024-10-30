@@ -1,1 +1,1 @@
-# template
+# batch file template
