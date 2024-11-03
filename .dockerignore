@@ -1,0 +1,15 @@
+__pycache__
+.vscode
+.git
+.venv
+dist
+schema
+.ruff_cache
+
+*.log
+.git*
+.editorconfig
+.cz.toml
+.dockerignore
+Dockfile
+schema.py

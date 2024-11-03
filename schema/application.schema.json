@@ -1,0 +1,44 @@
+{
+  "$defs": {
+    "LoggingConfig": {
+      "properties": {
+        "level": {
+          "default": null,
+          "description": "Logging level",
+          "oneOf": [
+            {
+              "enum": [
+                "CRITICAL",
+                "FATAL",
+                "ERROR",
+                "WARN",
+                "WARNING",
+                "INFO",
+                "DEBUG",
+                "NOTSET"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Level"
+        }
+      },
+      "title": "LoggingConfig",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "logging": {
+      "$ref": "#/$defs/LoggingConfig",
+      "default": {
+        "level": null
+      },
+      "description": "Logging configuration"
+    }
+  },
+  "title": "AppConfig",
+  "type": "object"
+}

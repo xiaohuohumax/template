@@ -1,0 +1,28 @@
+{
+  "yaml.schemas": {
+    "schema/application.schema.json": "config/application*.{yaml,yml}",
+    "schema/logging.schema.json": "config/logging.{yaml,yml}"
+  },
+  "cSpell.words": [
+    "asctime",
+    "commitizen",
+    "datefmt",
+    "dotenv",
+    "levelname",
+    "msecs",
+    "pydantic",
+    "ruamel",
+    "notset"
+  ],
+  "cSpell.ignorePaths": [
+    "*.lock",
+    "*.log",
+    ".vscode",
+  ],
+  "black-formatter.args": [
+    "--line-length",
+    "88",
+    "--target-version",
+    "py312"
+  ]
+}
