@@ -1,6 +1,9 @@
 import logging
 from pathlib import Path
 
+import uvicorn
+
+from .app import app
 from .core.args import args
 from .core.config import config
 from .core.env import env
@@ -25,6 +28,12 @@ def main():
     logger.debug(f"Args: {args}")
     logger.debug(f"Config: {config}")
     logger.debug(f"Env: {env}")
+    uvicorn.run(
+        app,
+        host=config.server.host,
+        port=config.server.port,
+        log_config=None,
+    )
 
 
 if __name__ == "__main__":

@@ -1,2 +1,18 @@
 logging:
   level: DEBUG
+
+server:
+  security:
+    secret_key: xiaohuohumax
+    algorithm: HS256
+
+  database:
+    type: sqlite
+    file: database/data.sqlite
+  # database:
+  #   type: mysql
+  #   host: localhost
+  #   port: 3306
+  #   username: root
+  #   password: "1234567890"
+  #   database: test

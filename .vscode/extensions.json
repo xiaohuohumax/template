@@ -6,6 +6,9 @@
     "ms-python.python",
     "donjayamanne.python-environment-manager",
     "kamilturek.vscode-pyproject-toml-snippets",
-    "ms-python.black-formatter"
+    "ms-python.black-formatter",
+    "mtxr.sqltools",
+    "yy0931.vscode-sqlite3-editor",
+    "ms-azuretools.vscode-docker"
   ]
 }

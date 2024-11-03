@@ -9,6 +9,8 @@ wheels/
 # venv
 .venv
 
+.idea/
+
 *.log
 .ruff_cache
 *.local

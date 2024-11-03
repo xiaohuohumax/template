@@ -9,6 +9,8 @@ from .args import args
 
 class Env(BaseSettings, case_sensitive=False):
     APP_NAME: str = Field("", description="Application name")
+    # api proxy(nginx...), e.g. / => /api/v1
+    API_PREFIX: str = Field("", description="API prefix")
 
 
 def load_env(env_folder: Path, mode: str) -> Env:

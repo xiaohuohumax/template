@@ -1,1 +1,1 @@
-# python template
+# python fastapi template

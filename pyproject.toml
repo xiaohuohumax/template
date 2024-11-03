@@ -1,7 +1,7 @@
 [project]
-name = "python_template"
+name = "python_fastapi_template"
 version = "0.0.1"
-description = "python template"
+description = "python fastapi template"
 license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">= 3.8"
@@ -13,9 +13,17 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
-    "pydantic>=2.9.2",
-    "pydantic-settings>=2.6.0",
-    "ruamel-yaml>=0.18.6",
+  "pydantic>=2.9.2",
+  "pydantic-settings>=2.6.0",
+  "ruamel-yaml>=0.18.6",
+  "fastapi>=0.115.4,<0.116.0",
+  "uvicorn[standard]>=0.32.0",
+  "sqlmodel>=0.0.22",
+  "pyjwt>=2.9.0",
+  "passlib[bcrypt]>=1.7.4",
+  "python-multipart>=0.0.17",
+  "bcrypt==4.0.1",
+  "pymysql>=1.1.1",
 ]
 
 [project.urls]
@@ -56,8 +64,8 @@ dev = "python -m app.main -m dev"
 prod = "python -m app.main -m prod"
 commit = { chain = ["schema", "lint_fix", "fmt", "git_add", "git_commit"] }
 schema = "python -m schema"
-build_image = "docker build -t python_template ."
-save_image = "docker save -o dist/python_template_image.tar python_template"
+build_image = "docker build -t python_fastapi_template ."
+save_image = "docker save -o dist/python_fastapi_template_image.tar python_fastapi_template"
 
 git_add = "git add ."
 git_commit = "cz commit"

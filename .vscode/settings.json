@@ -4,19 +4,29 @@
     "schema/logging.schema.json": "config/logging.{yaml,yml}"
   },
   "cSpell.words": [
+    "anyio",
     "asctime",
     "commitizen",
     "datefmt",
     "dotenv",
+    "fastapi",
     "levelname",
     "msecs",
+    "notset",
+    "passlib",
     "pydantic",
+    "pymysql",
+    "redoc",
     "ruamel",
-    "notset"
+    "sessionmaker",
+    "sqlalchemy",
+    "sqlmodel",
+    "uvicorn"
   ],
   "cSpell.ignorePaths": [
     "*.lock",
     "*.log",
+    "*.sql",
     ".vscode",
   ],
   "black-formatter.args": [

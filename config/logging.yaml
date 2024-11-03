@@ -21,6 +21,12 @@ handlers:
     backupCount: 20
     encoding: utf8
 
+loggers:
+  "sqlalchemy.engine":
+    handlers:
+      - console_handler
+      - file_handler
+
 root:
   handlers:
     - console_handler

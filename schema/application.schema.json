@@ -1,5 +1,47 @@
 {
   "$defs": {
+    "CorsConfig": {
+      "properties": {
+        "enabled": {
+          "default": true,
+          "description": "Whether to enable CORS",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "allow_origins": {
+          "description": "Allowed origins",
+          "items": {
+            "type": "string"
+          },
+          "title": "Allow Origins",
+          "type": "array"
+        },
+        "allow_methods": {
+          "description": "Allowed methods",
+          "items": {
+            "type": "string"
+          },
+          "title": "Allow Methods",
+          "type": "array"
+        },
+        "allow_headers": {
+          "description": "Allowed headers",
+          "items": {
+            "type": "string"
+          },
+          "title": "Allow Headers",
+          "type": "array"
+        },
+        "allow_credentials": {
+          "default": true,
+          "description": "Whether to allow credentials",
+          "title": "Allow Credentials",
+          "type": "boolean"
+        }
+      },
+      "title": "CorsConfig",
+      "type": "object"
+    },
     "LoggingConfig": {
       "properties": {
         "level": {
@@ -28,6 +70,147 @@
       },
       "title": "LoggingConfig",
       "type": "object"
+    },
+    "MySQLDatabaseConfig": {
+      "properties": {
+        "type": {
+          "const": "mysql",
+          "default": "mysql",
+          "description": "Database type",
+          "title": "Type",
+          "type": "string"
+        },
+        "host": {
+          "default": "localhost",
+          "description": "Database address",
+          "title": "Host",
+          "type": "string"
+        },
+        "port": {
+          "default": 3306,
+          "description": "Database port",
+          "title": "Port",
+          "type": "integer"
+        },
+        "username": {
+          "default": "",
+          "description": "Database username",
+          "title": "Username",
+          "type": "string"
+        },
+        "password": {
+          "default": "",
+          "description": "Database password",
+          "title": "Password",
+          "type": "string"
+        },
+        "database": {
+          "default": "",
+          "description": "Database name",
+          "title": "Database",
+          "type": "string"
+        }
+      },
+      "title": "MySQLDatabaseConfig",
+      "type": "object"
+    },
+    "SQLiteDatabaseConfig": {
+      "properties": {
+        "type": {
+          "const": "sqlite",
+          "default": "sqlite",
+          "description": "Database type",
+          "title": "Type",
+          "type": "string"
+        },
+        "file": {
+          "description": "Database file path",
+          "format": "path",
+          "title": "File",
+          "type": "string"
+        }
+      },
+      "title": "SQLiteDatabaseConfig",
+      "type": "object"
+    },
+    "SecurityConfig": {
+      "properties": {
+        "secret_key": {
+          "default": "1234567890",
+          "description": "Security key",
+          "title": "Secret Key",
+          "type": "string"
+        },
+        "algorithm": {
+          "const": "HS256",
+          "default": "HS256",
+          "description": "Encryption algorithm",
+          "title": "Algorithm",
+          "type": "string"
+        }
+      },
+      "title": "SecurityConfig",
+      "type": "object"
+    },
+    "ServerConfig": {
+      "properties": {
+        "host": {
+          "default": "localhost",
+          "description": "Service listen address",
+          "title": "Host",
+          "type": "string"
+        },
+        "port": {
+          "default": 8080,
+          "description": "Service listen port",
+          "title": "Port",
+          "type": "integer"
+        },
+        "cors": {
+          "$ref": "#/$defs/CorsConfig",
+          "default": {
+            "enabled": true,
+            "allow_origins": [
+              "*"
+            ],
+            "allow_methods": [
+              "*"
+            ],
+            "allow_headers": [
+              "*"
+            ],
+            "allow_credentials": true
+          },
+          "description": "CORS configuration"
+        },
+        "security": {
+          "$ref": "#/$defs/SecurityConfig",
+          "default": {
+            "secret_key": "1234567890",
+            "algorithm": "HS256"
+          },
+          "description": "Security configuration"
+        },
+        "database": {
+          "default": {
+            "type": "sqlite",
+            "file": "data.sqlite",
+            "url": "sqlite:///data.sqlite"
+          },
+          "description": "Database configuration",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/MySQLDatabaseConfig"
+            },
+            {
+              "$ref": "#/$defs/SQLiteDatabaseConfig"
+            }
+          ],
+          "title": "Database"
+        }
+      },
+      "title": "ServerConfig",
+      "type": "object"
     }
   },
   "properties": {
@@ -37,6 +220,36 @@
         "level": null
       },
       "description": "Logging configuration"
+    },
+    "server": {
+      "$ref": "#/$defs/ServerConfig",
+      "default": {
+        "host": "localhost",
+        "port": 8080,
+        "cors": {
+          "allow_credentials": true,
+          "allow_headers": [
+            "*"
+          ],
+          "allow_methods": [
+            "*"
+          ],
+          "allow_origins": [
+            "*"
+          ],
+          "enabled": true
+        },
+        "security": {
+          "algorithm": "HS256",
+          "secret_key": "1234567890"
+        },
+        "database": {
+          "file": "data.sqlite",
+          "type": "sqlite",
+          "url": "sqlite:///data.sqlite"
+        }
+      },
+      "description": "Server configuration"
     }
   },
   "title": "AppConfig",

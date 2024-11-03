@@ -23,7 +23,9 @@ class Args(BaseModel):
 
 
 parser = argparse.ArgumentParser(
-    prog="python -m app", add_help=False, description="Welcome to python-template app"
+    prog="python -m app",
+    add_help=False,
+    description="Welcome to python-fastapi-template app",
 )
 parser.add_argument(
     "-h",
