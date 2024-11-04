@@ -45,14 +45,14 @@ importers:
       simple-git-hooks:
         specifier: ^2.11.1
         version: 2.11.1
+      vite:
+        specifier: ^5.4.10
+        version: 5.4.10(@types/node@22.8.1)
 
   packages/context: {}
 
   packages/view:
     dependencies:
-      '@types/vscode-webview':
-        specifier: ^1.57.5
-        version: 1.57.5
       '@vscode/l10n':
         specifier: ^0.0.18
         version: 0.0.18
@@ -63,6 +63,9 @@ importers:
         specifier: ^3.4.19
         version: 3.5.12(typescript@5.6.3)
     devDependencies:
+      '@types/vscode-webview':
+        specifier: ^1.57.5
+        version: 1.57.5
       '@vitejs/plugin-vue':
         specifier: ^5.1.4
         version: 5.1.4(vite@5.4.10(@types/node@22.8.1))(vue@3.5.12(typescript@5.6.3))

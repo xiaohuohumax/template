@@ -1,6 +1,6 @@
-# ts-vscode-extension-template
+# view
 
-## 1.0.1
+## 0.0.1
 
 ### Patch Changes
 
@@ -8,9 +8,3 @@
 
 - Updated dependencies []:
   - context@1.0.1
-
-## 1.0.0
-
-### Major Changes
-
-- init

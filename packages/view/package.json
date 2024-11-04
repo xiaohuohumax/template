@@ -1,7 +1,7 @@
 {
   "name": "view",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -10,12 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/vscode-webview": "^1.57.5",
     "@vscode/l10n": "^0.0.18",
     "context": "workspace:*",
     "vue": "^3.4.19"
   },
   "devDependencies": {
+    "@types/vscode-webview": "^1.57.5",
     "@vitejs/plugin-vue": "^5.1.4",
     "unocss": "^0.63.6",
     "vite": "^5.4.10",

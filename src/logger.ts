@@ -4,7 +4,7 @@ import { NAME } from './constant'
 import { Disposable } from './util'
 
 export class Logger extends Disposable {
-  public static readonly LOG_LEVEL: vscode.LogLevel = vscode.LogLevel[import.meta.env.VITE_LOG_LEVEL]
+  public static readonly LOG_LEVEL: vscode.LogLevel = vscode.LogLevel[import.meta.env.VITE_LOG_LEVEL || 'Info']
   private static readonly DEFAULT_FORMAT: string = ':time: :level: :caller: :message:'
 
   public static inspectMessages(...messages: unknown[]): string {
