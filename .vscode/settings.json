@@ -89,9 +89,11 @@
     "antfu",
     "breakline",
     "commitlint",
+    "jsdelivr",
     "prefixs",
     "tada",
     "tampermonkey",
-    "userscript"
+    "userscript",
+    "vite"
   ]
 }

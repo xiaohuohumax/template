@@ -1,9 +1,13 @@
-import { GM_log } from '$'
-
-async function start() {
-  GM_log(import.meta.env.VITE_APP_TITLE)
-}
+import { createApp } from 'vue'
+import App from './App.vue'
+import './style.css'
 
 if (window === top) {
-  start().catch(GM_log)
+  createApp(App).mount(
+    (() => {
+      const app = document.createElement('div')
+      document.body.append(app)
+      return app
+    })(),
+  )
 }

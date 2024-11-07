@@ -1,1 +1,1 @@
-# ts tampermonkey template
+# ts tampermonkey vue template

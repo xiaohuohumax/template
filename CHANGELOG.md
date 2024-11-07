@@ -1,4 +1,4 @@
-# ts-tampermonkey-template
+# ts-tampermonkey-vue-template
 
 ## 1.0.0
 
