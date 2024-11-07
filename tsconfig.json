@@ -1,3 +1,14 @@
 {
-  "extends": "./tsconfig.base.json"
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "types": [
+      "vite/client",
+      "vite-plugin-monkey/client",
+      "vite-plugin-monkey/global"
+    ]
+  },
+  "include": [
+    "src",
+    "types"
+  ]
 }

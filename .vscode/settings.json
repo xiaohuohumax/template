@@ -90,6 +90,8 @@
     "breakline",
     "commitlint",
     "prefixs",
-    "tada"
+    "tada",
+    "tampermonkey",
+    "userscript"
   ]
 }
