@@ -26,7 +26,8 @@
     "postinstall": "simple-git-hooks",
     "changeset": "changeset",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "release": "pnpm build && changeset publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.12.0",
