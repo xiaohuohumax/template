@@ -28,21 +28,21 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.5.12"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.8.0",
+    "@antfu/eslint-config": "^3.12.0",
     "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.9",
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
-    "@vitejs/plugin-vue": "^5.1.4",
+    "@changesets/cli": "^2.27.10",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@vitejs/plugin-vue": "^5.2.1",
     "@xiaohuohumax/vite-plugin-bookmarklet": "^1.0.1",
     "commitizen": "^4.3.1",
-    "cz-git": "^1.10.1",
-    "eslint": "^9.13.0",
+    "cz-git": "^1.11.0",
+    "eslint": "^9.17.0",
     "simple-git-hooks": "^2.11.1",
-    "vite": "^5.4.10"
+    "vite": "^6.0.3"
   },
   "simple-git-hooks": {
     "commit-msg": "npx commitlint --edit $1",
